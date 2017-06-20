@@ -1,7 +1,35 @@
+$bgc:          #FFFFFF;
+$bgc-even:     #F9F9F9;
+$border-color: #DDDDDD;
+
 .beer_table {
   width: 100%;
+  background: $bgc;
+  border: solid 1px $border-color;
 
-  th {
-    padding: 15px;
+  thead {
+    background-color: $bgc-even;
+
+    th {
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      text-transform: capitalize;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $bgc;
+
+      &:nth-child(even) {
+        background-color: $bgc-even;
+      }
+    }
+
+    td {
+      padding: 5px 15px;
+    }
+
   }
 }
