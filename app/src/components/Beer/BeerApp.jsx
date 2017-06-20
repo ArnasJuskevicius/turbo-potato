@@ -50,14 +50,16 @@ class BeerApp extends React.Component {
 
 
     render() {
-        if(!R.isEmpty(this.state.beerList)) {
-            return <BeerList
-                beerList={this.state.beerList}
-                clickHandler={this.sortByValue}
-            />
-        };
-
-        return null;
+        return (
+            <div className="container">
+                {!R.isEmpty(this.state.beerList) &&
+                    <BeerList
+                        beerList={this.state.beerList}
+                        clickHandler={this.sortByValue}
+                    />
+                }
+            </div>
+        )
     }
 }
 
